@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <title>Backbone.js Contact Web App</title>
+
+    <link href="style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <div id="persons">
+
+        <header>
+
+            <div id="filter"><label>Show me:</label></div>
+
+            <a id="showForm" href="#">Add new Contact</a>
+
+            <form id="addContact" action="#">
+
+                <label for="name">Name:</label><input id="name" /><br />
+
+                <label for="type">Type:</label><input id="type" /><br />
+
+                <label for="address">Address:</label><input id="address" /><br />
+
+                <label for="contact">Contact:</label><input id="contact" /><br />
+
+                <label for="email">Email_Id:</label><input id="email" /><br />
+
+                <button id="add">Add</button>
+
+            </form>
+
+        </header>
+
+    </div>
+
+    <script id="personTemplate" type="text/template">
+
+        <img src="<%= photo %>" />
+
+        <h1><%= name %><span><%= type %></span></h1>
+
+        <div><%= address %></div>
+
+        <dl>
+
+            <dt>Contact:</dt>
+
+            <dd><%= contact %></dd>
+
+            <dt>Email:</dt>
+
+            <dd><a href="mailto:<%= email %>"><%= email %></a></dd>
+
+        </dl>
+
+        <button class="delete">Delete</button>
+
+        <button class="edit">Edit</button>
+
+    </script>
+
+<script id="personEditTemplate" type="text/template">
+
+        <form action="#">
+
+            <input class="name" value="<%= name %>" />
+
+            <input id="type" type="hidden" value="<%= type %>" />
+
+            <input class="address" value="<%= address %>" />
+
+            <input class="contact" value="<%= contact %>" />
+
+            <input class="email" value="<%= email %>" />
+
+            <button class="save">Save</button>
+
+            <button class="cancel">Cancel</button>
+
+        </form>
+
+    </script>
+
+<script src="js/jquery-1.7.1.min.js"></script>
+
+    <script src="js/json2.js"></script>
+
+    <script src="js/underscore-min.js"></script>
+
+    <script src="js/backbone-min.js"></script>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
